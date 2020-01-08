@@ -11751,7 +11751,7 @@ WorldRenderer.prototype.setScene = function(scene) {
     muted: scene.muted
   };
 
-  this.setDefaultYaw_(scene.defaultYaw || 0);
+  //this.setDefaultYaw_(scene.defaultYaw || 0);
 
   // Disable VR mode if explicitly disabled, or if we're loading a video on iOS
   // 9 or earlier.
@@ -11900,7 +11900,7 @@ WorldRenderer.prototype.setDefaultYaw_ = function(angleRad) {
   // By default, it should be at the center of the image.
   var display = this.controls.getVRDisplay();
   // For desktop, we subtract the current display Y axis
-  var theta = display.theta_ || 0;
+  var theta = 0;
   // For devices with orientation we make the current view center
   if (display.poseSensor_) {
     display.poseSensor_.resetPose();
